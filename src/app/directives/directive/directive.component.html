@@ -1,0 +1,53 @@
+<p>directive component starts!=========================</p>
+
+xxxxxxxxxxxxxxxNG-IFxxxxxxxxxxxxxxxxxxxx: <br>
+
+Type 1:                        <br>
+
+<div *ngIf="booleanVar; then template1; else template2">
+</div>
+
+    <ng-template #template1>
+        Template 1 is called!                       <br>
+    </ng-template>
+
+    <ng-template #template2>
+        Template 2 is called!                       <br>
+    </ng-template>
+
+Type 2:
+
+    <div *ngIf="booleanVar">IF PART CALLED</div>                       <br>
+
+Type 3: [if sttement with else template]
+
+<div *ngIf="booleanVar; else template2">IF PART CALLED</div>
+
+xxxxxxxxxxngForxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <br>
+ 
+Type 1:                                               <br>
+<div *ngFor="let dummy of employees">
+    Complete array: {{dummy}} <br>           //Wrong output - useful only for array not object
+    Email alone: {{dummy.email}} <br>
+</div>
+                                                    <br>
+Type 2:                                               <br>
+<div *ngFor="let dummy of arrayVar">        
+    {{dummy}}                                       <br>
+</div>
+                                                               <br>
+Print array variables:                                      <br>
+{{arrayVar}}                                                 <br>
+
+
+xxxxxxxxxxxxxxxxxxngSwitchxxxxxxxxxxxxxxxxxxx
+
+<div [ngSwitch]="switchVar">    //works for string, boolean, number  <br>
+<div *ngSwitchCase="'one'">One called</div>       <br>
+<div *ngSwitchCase="'two'">Two called</div>        <br>
+<div *ngSwitchCase="'two'">Two called twice</div>        <br>
+<div *ngSwitchDefault>Default</div>              <br>
+</div>
+
+
+<p>directive component stops!======================</p>

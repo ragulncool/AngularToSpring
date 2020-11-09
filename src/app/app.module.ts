@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
+import { InterpolationComponent } from './interpolation/interpolation.component';
+import { DirectiveComponent } from './directives/directive/directive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OneComponent,
-    TwoComponent
+    TwoComponent,
+    InterpolationComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,
